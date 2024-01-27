@@ -1,8 +1,4 @@
-export function log(
-	target: Object,
-	propertyKey: string,
-	descriptor: TypedPropertyDescriptor<any>,
-) {
+export function log(target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) {
 	const originalMethod = descriptor.value
 
 	descriptor.value = async function (...args: any[]) {
